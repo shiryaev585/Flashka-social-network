@@ -38,6 +38,25 @@ a {
     color: #fff;
 }
 
+.inputWrapper {
+    display: flex;
+    align-items: center;
+
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    padding: 5px;
+    width: 300px;
+}
+
+.input[placeholder] {
+    font-size: 16px;
+    opacity: 0.7;
+}
+
 .textarea {
     font-family: 'Segoe UI', 'Roboto', sans-serif;
     font-size: 16px;

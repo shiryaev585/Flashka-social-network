@@ -4,8 +4,8 @@
     "header header"
     "nav content";
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
+  grid-template-columns: 4fr 8fr;
+  grid-gap: 20px;
 }
 
 ul {
@@ -21,7 +21,14 @@ button {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 .app-wrapper-content {
   grid-area: content;
   background-color: rgb(211, 228, 235);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  margin-right: 300px;
 }

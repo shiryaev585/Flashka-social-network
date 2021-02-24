@@ -1,5 +1,13 @@
 .header {
-    grid-area: header;
-    background-color: #41B883;
-    padding: 10px 40px;
+  grid-area: header;
+  background-color: #41b883;
+  padding: 10px 40px;
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+  width: 100%;
+  position: fixed;
+}
+
+.headerLink {
+  width: 40px;
+  margin: 0 auto;
 }

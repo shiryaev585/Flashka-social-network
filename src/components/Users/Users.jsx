@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./Users.module.css";
 import styles from "./Users.module.css";
 
 const Users = (props) => {
@@ -35,7 +36,7 @@ const Users = (props) => {
   ]);
 };
   return (
-    <div>
+    <div className={classes.wrapper}>
       {props.users.map((u) => (
         <div key={u.id}>
           <span>
