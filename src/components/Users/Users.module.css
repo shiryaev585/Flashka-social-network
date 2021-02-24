@@ -1,12 +1,48 @@
 .wrapper {
     padding: 10px;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    align-items: center;
+    align-items: center; */
 }
 .userAva {
     width: 80px;
+}
+
+.getUsersBtn {
+    width: 100%;
+    background-color: #41B883;
+    border-radius: 3px;
+    padding: 25px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.getUsersBtn:hover {
+    cursor: pointer;
+    background-color: #379c6f;
+}
+
+.getUsersBtn:active {
+    background-color: #41B883;
+}
+
+.followBtn {
+    display: block;
+    background-color: #41B883;
+    border-radius: 3px;
+    padding: 5px;
+    color: #fff;
+    margin: 10px auto 0;
+}
+
+.followBtn:hover {
+    cursor: pointer;
+    background-color: #379c6f;
+}
+
+.followBtn:active {
+    background-color: #41B883;
 }
 
 span {
@@ -14,10 +50,15 @@ span {
 }
 
 .userWrapper {
+    display: flex;
+    margin: 8px 0 0 0;
     padding: 8px;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 2px 2px 8px -3px rgba(34, 60, 80, 0.6);
+}
 
+.userWrapper:hover {
+    background-color: rgb(198, 217, 224);
 }
 
 .userAva {
