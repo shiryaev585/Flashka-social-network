@@ -1,6 +1,26 @@
 .wrapper {
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
 }
 .userAva {
     width: 80px;
+}
+
+span {
+    display: block;
+}
+
+.userWrapper {
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+
+}
+
+.userAva {
+    display: block;
+    margin: 0 auto;
 }

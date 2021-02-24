@@ -1,47 +1,24 @@
+import * as axios from "axios";
 import React from "react";
 import classes from "./Users.module.css";
-import styles from "./Users.module.css";
+import userAva from "../../assets/images/user.png";
 
 const Users = (props) => {
+  if (props.users.length === 0) {
+     axios
+      .get("https://social-network.samuraijs.com/api/1.0/users")
+      .then((res) => {
+        props.setUsers(res.data.items);
+      });
+  };
 
-    if(props.users.length === 0) {
-  props.setUsers([
-    {
-      id: 1,
-      followed: false,
-      avaUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaRlkTCNfY65sDMC6j87tzU7eisE9izY8ZQg&usqp=CAU",
-      fullName: "Alexander",
-      status: "I want a job",
-      location: { city: "Moscow", country: "Russia" },
-    },
-    {
-      id: 2,
-      followed: false,
-      avaUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaRlkTCNfY65sDMC6j87tzU7eisE9izY8ZQg&usqp=CAU",
-      fullName: "Dmitry",
-      status: "I am IT-Kamasutra Yo Yo Yo",
-      location: { city: "Minsk", country: "Belorus" },
-    },
-    {
-      id: 3,
-      followed: true,
-      avaUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaRlkTCNfY65sDMC6j87tzU7eisE9izY8ZQg&usqp=CAU",
-      fullName: "Olga",
-      status: "I am a boss",
-      location: { city: "Pyatigorsk", country: "Russia" },
-    },
-  ]);
-};
   return (
     <div className={classes.wrapper}>
       {props.users.map((u) => (
-        <div key={u.id}>
-          <span>
+        <div key={u.id} className={classes.userWrapper}>
+          <div>
             <div>
-              <img src={u.avaUrl} className={styles.userAva} />
+              <img src={u.photos.small != null ? u.photos.small : userAva} className={classes.userAva} />
             </div>
             <div>
               {u.followed ? (
@@ -62,17 +39,17 @@ const Users = (props) => {
                 </button>
               )}
             </div>
-          </span>
-          <span>
-            <span>
-              <div>{u.fullName}</div>
-              <div>{u.status}</div>
-            </span>
-            <span>
-              <div>{u.location.country}</div>
-              <div>{u.location.city}</div>
-            </span>
-          </span>
+          </div>
+          <p>
+            <p>
+              <span>{u.name}</span>
+              <span>{u.status}</span>
+            </p>
+            <p>
+              <span>{'u.location.country'}</span>
+              <span>{'u.location.city'}</span>
+            </p>
+          </p>
         </div>
       ))}
     </div>
