@@ -29,6 +29,7 @@
 
 .followBtn {
     display: block;
+    width: 100px;
     background-color: #41B883;
     border-radius: 3px;
     padding: 5px;
