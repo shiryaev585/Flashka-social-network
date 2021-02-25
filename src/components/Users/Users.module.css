@@ -5,6 +5,15 @@
     justify-content: start;
     align-items: center; */
 }
+
+.selectedPage {
+    font-weight: bold;
+}
+
+span:hover {
+    cursor: pointer;
+}
+
 .userAva {
     width: 80px;
 }
@@ -46,7 +55,7 @@
     background-color: #41B883;
 }
 
-span {
+.userLocation {
     display: block;
 }
 
