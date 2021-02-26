@@ -1,0 +1,14 @@
+.dialog {
+    display: flex;
+    align-items: center;
+    padding: 11px;
+    &__img {
+        width: 30px;
+        border-radius: 50px;
+        margin-right: 8px;
+    }
+    & a {
+        display: block;
+        color: #0B0731;
+    }
+}

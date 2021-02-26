@@ -6,6 +6,13 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 4fr 8fr;
   grid-gap: 20px;
+  &__content {
+    grid-area: content;
+    background-color: rgb(211, 228, 235);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    margin-right: 300px;
+  }
 }
 
 ul {
@@ -14,6 +21,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 button {
@@ -23,12 +31,4 @@ button {
 
 input {
   outline: none;
-}
-
-.app-wrapper-content {
-  grid-area: content;
-  background-color: rgb(211, 228, 235);
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
-  margin-right: 300px;
 }

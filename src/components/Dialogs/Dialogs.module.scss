@@ -1,0 +1,44 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  &__items {
+    padding: 10px;
+    color: #fff;
+    & .active {
+      padding: 8px;
+    }
+  }
+  &__messages {
+    padding: 10px;
+    background-color: #f4f9fc;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+  }
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  padding: 5px;
+  width: 240px;
+  &[placeholder] {
+    font-size: 16px;
+    opacity: 0.7;
+  }
+}
+
+.btn {
+  display: block;
+  background-color: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+}

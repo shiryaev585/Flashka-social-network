@@ -1,7 +1,7 @@
 import React from "react";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import classes from "./Dialogs.module.css";
+import classes from "./Dialogs.module.scss";
 import buttonImg from "./../../assets/icons/send_message.png";
 
 const Dialogs = (props) => {
@@ -27,8 +27,8 @@ const Dialogs = (props) => {
 
   return (
     <div className={classes.dialogs}>
-      <div className={classes.dialogsItems}>{dialogsElements}</div>
-      <div className={classes.messages}>
+      <div className={classes.dialogs__items}>{dialogsElements}</div>
+      <div className={classes.dialogs__messages}>
         <div>{messagesElements}</div>
         <div className={classes.inputWrapper}>
           <div>
@@ -39,12 +39,6 @@ const Dialogs = (props) => {
               className={classes.input}
               value={newMessageText}
             />
-            {/* <textarea
-              placeholder='Send message'
-              onChange={onNewMessageChange}
-              className={classes.textarea}
-              value={newMessageText}
-            /> */}
           </div>
           <div>
             <button className={classes.btn} onClick={onSendMessageClick}>

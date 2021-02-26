@@ -1,6 +1,6 @@
 import * as axios from "axios";
 import React from "react";
-import classes from "./Users.module.css";
+import classes from "./Users.module.scss";
 import userAva from "../../assets/images/user.png";
 
 const Users = (props) => {

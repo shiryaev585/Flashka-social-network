@@ -1,0 +1,53 @@
+@import '../../assets/variables/variables.scss';
+
+.wrapper {
+    padding: 10px;
+}
+
+.selectedPage {
+    font-weight: bold;
+}
+
+span:hover {
+    cursor: pointer;
+}
+
+.userAva {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+.followBtn {
+    display: block;
+    width: 100px;
+    background-color: $green;
+    border-radius: 3px;
+    padding: 5px;
+    color: #fff;
+    margin: 10px auto 0;
+    &:hover {
+        cursor: pointer;
+        background-color: $greenHover;
+        transition: $transition;
+    }
+    &:active {
+        background-color: $green;
+    }
+}
+
+.userLocation {
+    display: block;
+}
+
+.userWrapper {
+    display: flex;
+    margin: 8px 0 0 0;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px -3px rgba(34, 60, 80, 0.6);
+    &:hover {
+        background-color: rgb(198, 217, 224);
+        transition: $transition;
+    }
+}

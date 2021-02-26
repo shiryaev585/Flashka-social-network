@@ -4,24 +4,21 @@
     border-radius: 5px;
     box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
     margin-left: 300px;
-}
-
-ul {
-  padding: 0;
+    &__item {
+      color: #fff;
+    }
+    &__active {
+      color: darkgreen;
+    }
+    &__ul {
+      padding: 0;
+    }
 }
 
 li {
   padding: 5px 24px ;
+  &:hover {
+    background: #36a372;
+  }
 }
 
-li:hover {
-  background: #36a372;
-}
-
-.item {
-  color: #fff;
-}
-
-.item.active {
-  color: darkgreen;
-}

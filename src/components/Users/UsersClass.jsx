@@ -1,6 +1,6 @@
 import React from "react";
 import * as axios from "axios";
-import classes from "./Users.module.css";
+import classes from "./Users.module.scss";
 import userAva from "../../assets/images/user.png";
 
 class UsersClass extends React.Component {

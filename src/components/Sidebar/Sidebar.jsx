@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Sidebar.module.css';
+import classes from './Sidebar.module.scss';
 import Friends from './Friends/Friends';
 
 const Sidebar = (props) => {
