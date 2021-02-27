@@ -31,20 +31,16 @@ const Dialogs = (props) => {
       <div className={classes.dialogs__messages}>
         <div>{messagesElements}</div>
         <div className={classes.inputWrapper}>
-          <div>
-            <input
+        <input
               type="text"
               placeholder="Send message..."
               onChange={onNewMessageChange}
               className={classes.input}
               value={newMessageText}
             />
-          </div>
-          <div>
             <button className={classes.btn} onClick={onSendMessageClick}>
               <img src={buttonImg} alt="message-icon" />
             </button>
-          </div>
         </div>
       </div>
     </div>

@@ -69,7 +69,7 @@ const Users = (props) => {
             {p}{" "}
           </span>
         );
-      })};
+      })}
     </div>
   );
 };
