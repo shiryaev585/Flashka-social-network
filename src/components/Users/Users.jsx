@@ -17,7 +17,7 @@ const Users = (props) => {
         <div key={u.id} className={classes.userWrapper}>
           <div>
             <div>
-              <NavLink to={'/profile'}>
+              <NavLink to={"/profile/" + u.id}>
                 <img
                   src={u.photos.small != null ? u.photos.small : userAva}
                   className={classes.userAva}
@@ -61,18 +61,20 @@ const Users = (props) => {
           </div>
         </div>
       ))}
-      {pages.map((p) => {
-        return (
-          <span
-            className={props.currentPage === p && classes.selectedPage}
-            onClick={(e) => {
-              props.onPageChanged(p);
-            }}
-          >
-            {p}{" "}
-          </span>
-        );
-      })}
+      <div className={classes.paginationWrapper}>
+        {pages.map((p) => {
+          return (
+            <span
+              className={props.currentPage === p && classes.selectedPage}
+              onClick={(e) => {
+                props.onPageChanged(p);
+              }}
+            >
+              {p}{" "}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 };
