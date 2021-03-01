@@ -2,14 +2,14 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   &__items {
-    padding: 10px;
+    padding: 8px;
     color: #fff;
     & .active {
       padding: 8px;
     }
   }
   &__messages {
-    padding: 10px 0;
+    padding: 8px;
     background-color: #f4f9fc;
     border-radius: 0 5px 5px 0;
     position: relative;
@@ -20,6 +20,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
@@ -29,7 +30,7 @@
   border-bottom: 1px solid #000;
   background: transparent;
   padding: 5px;
-  width: 200px;
+  width: 100%;
   &[placeholder] {
     font-size: 16px;
     opacity: 0.7;
@@ -40,6 +41,7 @@
   display: block;
   background-color: transparent;
   padding: 0;
+  margin-right: 16px;
   &:hover {
     cursor: pointer;
   }
