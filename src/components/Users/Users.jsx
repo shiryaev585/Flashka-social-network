@@ -18,7 +18,7 @@ const Users = (props) => {
         <div key={u.id} className={classes.userWrapper}>
           <div>
             <div>
-              <NavLink to={"/profile/" + u.id}>
+              <NavLink to={`/profile/${u.id}`}>
                 <img
                   src={u.photos.small != null ? u.photos.small : userAva}
                   className={classes.userAva}
@@ -28,8 +28,10 @@ const Users = (props) => {
             <div>
               {u.followed ? (
                 <button
+                  disabled={props.followingInProgress.some(id => id === u.id)}
                   className={classes.followBtn}
                   onClick={() => {
+                    props.toggleFollowingInProgress(true, u.id)
                     axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
                       withCredentials: true,
                       headers: {
@@ -40,6 +42,7 @@ const Users = (props) => {
                         if(res.data.resultCode == 0) {
                           props.unfollow(u.id);
                         }
+                        props.toggleFollowingInProgress(false, u.id)
                       });
                   }}
                 >
@@ -47,8 +50,10 @@ const Users = (props) => {
                 </button>
               ) : (
                 <button
+                  disabled={props.followingInProgress.some(id => id === u.id)}
                   className={classes.followBtn}
                   onClick={() => {
+                    props.toggleFollowingInProgress(true, u.id)
                     axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
                       withCredentials: true,
                       headers: {
@@ -59,6 +64,7 @@ const Users = (props) => {
                         if(res.data.resultCode == 0) {
                           props.follow(u.id);
                         }
+                        props.toggleFollowingInProgress(false, u.id)
                       });
                   }}
                 >
