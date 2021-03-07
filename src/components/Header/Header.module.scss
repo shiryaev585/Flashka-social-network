@@ -8,19 +8,20 @@
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  &__link {
-    width: 40px;
-    margin: 10px 0 0 300px;
+  padding: 10px;
+  justify-content: center;
+  &__loginBlock {
+    margin-left: 640px;
+    color: #fff;
+    font-size: 22px;
   }
-}
-
-.loginBlock {
-  margin-right: 300px;
-  &__link {
+  &__loginBlock_link {
     color: #fff;
     &:hover {
       color: darkgreen;
+    }
+    &:active {
+      color: #fff;
     }
   }
 }

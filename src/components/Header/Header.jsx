@@ -1,19 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import classes from "./Header.module.scss";
+import logo from "../../assets/icons/flashka_logo.svg"
 
 const Header = (props) => {
   return (
     <header className={classes.header}>
-      <a href="#" className={classes.header__link}  >
+      <NavLink to="/profile" className={classes.header__link}  >
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Logo_TV_2015.svg/1200px-Logo_TV_2015.svg.png"
+          src={logo}
           alt="img"
-          height="40px"
+          height="80px"
         />
-      </a>
-      <div className={classes.loginBlock}>
-        { props.isAuth ? props.login : <NavLink to="/login" className={classes.loginBlock__link}>Login</NavLink> }
+      </NavLink>
+      <div className={classes.header__loginBlock}>
+        { props.isAuth 
+          ? <NavLink to="/profile" className={classes.header__loginBlock_link}>Hello, {props.login}</NavLink>  
+          : <NavLink to="/login" className={classes.header__loginBlock_link}>Login</NavLink> }
       </div>
     </header>
   );
