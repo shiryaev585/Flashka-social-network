@@ -22,7 +22,6 @@ export const usersAPI = {
   },
   getProfile(userId) {
     return instance.get(`profile/${userId}`);
-      
   }
 };
 

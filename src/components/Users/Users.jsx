@@ -60,15 +60,15 @@ const Users = (props) => {
         </div>
       ))}
       <div className={classes.paginationWrapper}>
-        {pages.map((p) => {
+        {pages.map((page) => {
           return (
             <span
-              className={props.currentPage === p && classes.selectedPage}
+              className={props.currentPage === page && classes.selectedPage}
               onClick={(e) => {
-                props.onPageChanged(p);
+                props.onPageChanged(page);
               }}
             >
-              {p}{" "}
+              {page}{" "}
             </span>
           );
         })}
