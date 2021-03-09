@@ -1,5 +1,6 @@
 import React from "react";
 import Preloader from "../../common/Preloader/Preloader";
+import ProfileStatus from "./ProfileStatus"
 import classes from "./ProfileInfo.module.scss";
 
 const ProfileInfo = (props) => {
@@ -10,17 +11,18 @@ const ProfileInfo = (props) => {
   return (
     <div>
       <div>
-        <img
+        {/* <img
           className={classes.imgBg}
           src="https://s3-us-west-2.amazonaws.com/truevirtualtours.com/public/cache/user_5623/Panorama/34751/1280x600/Panorama_34751.jpg"
           alt="img"
           height="400px"
-        />
+        /> */}
       </div>
       <div className={classes.descriptionBlock}>
         <h3 className={classes.descriptionBlock__title}>Hi! I'm {props.profile.fullName}</h3>
         <div>
             <img src={props.profile.photos.large} className={classes.descriptionBlock__imgUser} />
+            <ProfileStatus status={"Hello"} />
         </div>
         <div className={classes.descriptionBlock__about}>
             <p>About me: {props.profile.aboutMe}</p>
