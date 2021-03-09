@@ -4,7 +4,7 @@ import preloader from "../../../assets/icons/spinning-circles.svg";
 
 const Preloader = () => {
     return <div  className={classes.imgWrapper}>
-    <img src={preloader} />
+    <img src={preloader} alt="preloader" />
   </div>
 };
 

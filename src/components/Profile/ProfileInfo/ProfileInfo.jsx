@@ -21,8 +21,8 @@ const ProfileInfo = (props) => {
       <div className={classes.descriptionBlock}>
         <h3 className={classes.descriptionBlock__title}>Hi! I'm {props.profile.fullName}</h3>
         <div>
-            <img src={props.profile.photos.large} className={classes.descriptionBlock__imgUser} />
-            <ProfileStatus status={"Hello"} />
+            <img src={props.profile.photos.large} className={classes.descriptionBlock__imgUser} alt="user-img" />
+            <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
         </div>
         <div className={classes.descriptionBlock__about}>
             <p>About me: {props.profile.aboutMe}</p>
