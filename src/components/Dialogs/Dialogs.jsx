@@ -2,8 +2,8 @@ import React from "react";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import classes from "./Dialogs.module.scss";
-import buttonImg from "./../../assets/icons/send_message.png";
 import { Redirect } from "react-router";
+import AddMessageForm from "./AddMessageForm";
 
 const Dialogs = (props) => {
   let state = props.dialogsPage;
@@ -17,34 +17,18 @@ const Dialogs = (props) => {
 
   let newMessageText = state.newMessageText;
 
-  let onSendMessageClick = () => {
-    props.sendMessage();
+  let addNewMessage = (values) => {
+    props.sendMessage(values.newMessageText);
   };
 
-  let onNewMessageChange = (event) => {
-    let body = event.target.value;
-    props.updateNewMessageBody(body);
-  };
-
-  if (!props.isAuth) return <Redirect to="/login" />
+  if (!props.isAuth) return <Redirect to="/login" />;
 
   return (
     <div className={classes.dialogs}>
       <div className={classes.dialogs__items}>{dialogsElements}</div>
       <div className={classes.dialogs__messages}>
         <div>{messagesElements}</div>
-        <div className={classes.inputWrapper}>
-        <input
-              type="text"
-              placeholder="Send message..."
-              onChange={onNewMessageChange}
-              className={classes.input}
-              value={newMessageText}
-            />
-            <button className={classes.btn} onClick={onSendMessageClick}>
-              <img src={buttonImg} alt="message-icon" />
-            </button>
-        </div>
+        <AddMessageForm onSubmit={addNewMessage} />
       </div>
     </div>
   );

@@ -1,0 +1,22 @@
+.textarea {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  font-size: 16px;
+  border: 1px solid #dfdfdf;
+  outline: none;
+  resize: none;
+  width: 60%;
+  height: 150px;
+}
+
+.formControl.error input, 
+.formControl.error textarea {
+  border: 1px solid red;
+}
+
+span {
+  display: block;
+}
+
+.formControl.error span {
+  color: red;
+}
