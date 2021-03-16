@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../../common/Button/Button";
 import classes from "./Post.module.scss";
 
 const Post = (props) => {
@@ -10,7 +11,7 @@ const Post = (props) => {
       />
       {props.message}
       <div className={classes.likesWrp}>
-        <button className={classes.btn}>Лайкос</button>
+        <Button>Like</Button>
         {props.likesCount}
       </div>
     </div>

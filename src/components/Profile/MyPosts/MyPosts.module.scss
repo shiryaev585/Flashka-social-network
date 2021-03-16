@@ -1,5 +1,3 @@
-@import "../../../assets/variables/variables.scss";
-
 .postsWrapper {
   padding: 16px;
 }
@@ -8,18 +6,7 @@
   margin-top: 16px;
 }
 
-.btn {
-  display: block;
+form button {
   width: 100px;
-  background-color: $green;
-  border-radius: 3px;
-  padding: 5px;
-  color: #fff;
-  &:hover {
-    cursor: pointer;
-    background-color: $greenHover;
-  }
-  &:active {
-    background-color: $green;
-  }
+  margin-top: 10px;
 }

@@ -25,11 +25,11 @@ a {
   display: block;
 }
 
-button {
+button,
+input,
+textarea {
   border: none;
   outline: none;
+  display: block;
 }
 
-input {
-  outline: none;
-}

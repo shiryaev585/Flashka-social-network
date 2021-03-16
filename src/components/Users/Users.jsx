@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Users.module.scss";
 import userAva from "../../assets/images/user.png";
 import { NavLink } from "react-router-dom";
+import Button from "../common/Button/Button";
 
 const Users = (props) => {
   let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -15,7 +16,7 @@ const Users = (props) => {
     <div className={classes.wrapper}>
       {props.users.map((u) => (
         <div key={u.id} className={classes.userWrapper}>
-          <div>
+          <div className={classes.avaWrapper}>
             <div>
               <NavLink to={`/profile/${u.id}`}>
                 <img
@@ -27,21 +28,19 @@ const Users = (props) => {
             </div>
             <div>
               {u.followed ? (
-                <button
-                  className={classes.followBtn}
+                <Button
                   disabled={props.followingInProgress.some(id => id === u.id)}
                   onClick={() => {props.unfollow(u.id)}}
                 >
                   Unfollow
-                </button>
+                </Button>
               ) : (
-                <button
-                  className={classes.followBtn}
+                <Button
                   disabled={props.followingInProgress.some(id => id === u.id)}
                   onClick={() => {props.follow(u.id)}}
                 >
                   Follow
-                </button>
+                </Button>
               )}
             </div>
           </div>

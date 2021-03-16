@@ -1,0 +1,16 @@
+@import "../../../assets/variables/variables.scss";
+
+.btn {
+    display: block;
+    background-color: $green;
+    border-radius: 3px;
+    padding: 5px;
+    color: #fff;
+    &:hover {
+        cursor: pointer;
+        background-color: $greenHover;
+    }
+    &:active {
+        background-color: $green;
+    }
+}

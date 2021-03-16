@@ -37,12 +37,13 @@
   }
 }
 
-.btn {
+.formWrapper button {
   display: block;
   background-color: transparent;
   padding: 0;
   margin-right: 16px;
   &:hover {
     cursor: pointer;
+    background-color: transparent;
   }
 }

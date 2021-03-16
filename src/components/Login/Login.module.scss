@@ -1,3 +1,68 @@
+@import "../../assets/variables/variables.scss";
+
 .wrapper {
     padding: 16px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.loginForm {
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px -5px #223C50;
+    &__title {
+        margin: 0;
+    }
+}
+
+.input {
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 16px;
+    opacity: 0.7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.input[type=checkbox] {
+    margin: 10px 10px 0 0;
+}
+
+.checkboxWrapper {
+    display: flex;
+    align-items: center;
+    & p {
+        margin: 0;
+    }
+}
+
+.btn {
+    width: 100%;
+    display: block;
+    background-color: $green;
+    border-radius: 3px;
+    padding: 10px;
+    color: #fff;
+    margin-top: 10px;
+    &:hover {
+        cursor: pointer;
+        background-color: $greenHover;
+    }
+    &:active {
+        background-color: $green;
+    }
+}
+
+.reg {
+    margin-top: 16px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 16px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px -5px #223C50;
+}
+
+

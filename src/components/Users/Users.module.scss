@@ -4,6 +4,10 @@
     padding: 8px;
 }
 
+.avaWrapper {
+    margin-right: 16px;
+}
+
 .paginationWrapper {
     margin-top: 10px;
 }
@@ -22,24 +26,6 @@ span:hover {
     margin: 0 auto;
 }
 
-.followBtn {
-    display: block;
-    width: 100px;
-    background-color: $green;
-    border-radius: 3px;
-    padding: 5px;
-    color: #fff;
-    margin: 10px auto 0;
-    &:hover {
-        cursor: pointer;
-        background-color: $greenHover;
-        transition: $transition;
-    }
-    &:active {
-        background-color: $green;
-    }
-}
-
 .userLocation {
     display: block;
 }
@@ -53,6 +39,10 @@ span:hover {
     &:hover {
         background-color: $lightblueHover;
         transition: $transition;
+    }
+    & button {
+        width: 100px;
+        margin: 10px auto 0;
     }
 }
 

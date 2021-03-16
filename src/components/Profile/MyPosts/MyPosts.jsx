@@ -4,6 +4,7 @@ import { maxLengthCreator, required } from "../../../utils/validators";
 import { Textarea } from "../../common/FormsControls/FormsControls";
 import classes from "./MyPosts.module.scss";
 import Post from "./Post/Post";
+import Button from "../../common/Button/Button"
 
 const MyPosts = (props) => {
   let postsElements = props.posts.map((p) => (
@@ -33,11 +34,11 @@ const AddNewPostForm = (props) => {
           component={Textarea}
           name="newPostText"
           validate={[required, maxLength500]}
-        //   placeholder="Post something..."
+          placeholder="Post something..."
         />
       </div>
       <div>
-        <button className={classes.btn}>Add post</button>
+        <Button>Add post</Button>
       </div>
     </form>
   );

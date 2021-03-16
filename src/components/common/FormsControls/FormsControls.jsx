@@ -25,7 +25,7 @@ export const Input = (props) => {
   const { input, meta, child, ...restProps } = props;
   return (
     <FormControl {...props}>
-      <input {...input} {...restProps} className={classes.input} />
+      <input {...input} {...restProps} />
     </FormControl>
   );
 };

@@ -1,4 +1,7 @@
 import React from "react";
+import { Field, reduxForm } from "redux-form";
+import { Input } from "../../common/FormsControls/FormsControls";
+import classes from "./ProfileInfo.module.scss"
 
 class ProfileStatus extends React.Component {
 
@@ -47,7 +50,10 @@ class ProfileStatus extends React.Component {
         )}
         {this.state.editMode && (
           <div>
-            <input 
+            <Field 
+              type={"text"}
+              name={"status"}
+              component={Input} 
               onChange={this.onStatusChange}
               autoFocus={true} 
               onBlur={this.deactivateEditMode} 
@@ -61,4 +67,10 @@ class ProfileStatus extends React.Component {
   }
 }
 
-export default ProfileStatus;
+const StatusReduxForm = reduxForm({ form: "status" }) (ProfileStatus)
+
+const Status = (props) => {
+  return <StatusReduxForm {...props} />
+}
+
+export default Status;
