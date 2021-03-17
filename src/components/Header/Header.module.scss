@@ -14,6 +14,19 @@
     margin-left: 640px;
     color: #fff;
     font-size: 22px;
+    & button {
+      float: right;
+      padding: 3px;
+      background-color: #fff;
+      color: $green;
+      margin-top: 8px;
+      &:hover {
+        background-color: #eee;
+      }
+      &:active {
+        background-color: #fff;
+      }
+    }
   }
   &__loginBlock_link {
     color: #fff;

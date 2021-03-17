@@ -4,16 +4,20 @@ import { required } from "../../utils/validators";
 import { Input } from "../common/FormsControls/FormsControls";
 import classes from "./Login.module.scss";
 import image from "../../assets/icons/flashka_logo.svg";
+import { connect } from "react-redux";
+import { login } from "../../redux/authReducer";
+import { Redirect } from "react-router";
 
 const LoginForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit} className={classes.loginForm}>
-      <h1 className={classes.loginForm__title}>Login</h1>
+      <h2 className={classes.loginForm__title}>Login</h2>
       <div>
         <Field
           validate={[required]}
-          placeholder={"Login"}
-          name={"login"}
+          type={"email"}
+          placeholder={"Email"}
+          name={"email"}
           component={Input}
           className={classes.input}
         />
@@ -21,6 +25,7 @@ const LoginForm = (props) => {
       <div>
         <Field
           validate={[required]}
+          type={"password"}
           placeholder={"Password"}
           name={"password"}
           component={Input}
@@ -46,18 +51,28 @@ const LoginReduxForm = reduxForm({ form: "login" })(LoginForm);
 
 const Login = (props) => {
   const onSubmit = (formData) => {
-    console.log(formData);
+    props.login(formData.email, formData.password, formData.rememberMe);
   };
+
+  if (props.isAuth) {
+    return <Redirect to={"/profile"} />
+  }
 
   return (
     <div className={classes.wrapper}>
       <img src={image} alt="logo_picture" height="400px" />
       <div>
         <LoginReduxForm onSubmit={onSubmit} />
-        <div className={classes.reg}><h3>Here will be registration form</h3></div>
+        <div className={classes.reg}>
+          <h3>Here will be registration form</h3>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Login;
+const mapStateToProps = (state) => ({
+  isAuth: state.auth.isAuth
+})
+
+export default connect(mapStateToProps, { login })(Login);
