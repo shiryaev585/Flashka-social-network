@@ -47,7 +47,7 @@ const Users = (props) => {
           <div>
             <p>
               <span>{u.name}</span>
-              <span>{u.status}</span>
+              {/* <span>{u.status}</span> */}
             </p>
             <p>
               <span className={classes.userLocation}>

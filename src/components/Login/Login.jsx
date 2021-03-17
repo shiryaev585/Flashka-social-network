@@ -3,6 +3,7 @@ import { Field, reduxForm } from "redux-form";
 import { required } from "../../utils/validators";
 import { Input } from "../common/FormsControls/FormsControls";
 import classes from "./Login.module.scss";
+import loginClasses from "../common/FormsControls/FormsControls.module.scss";
 import image from "../../assets/icons/flashka_logo.svg";
 import { connect } from "react-redux";
 import { login } from "../../redux/authReducer";
@@ -41,7 +42,7 @@ const LoginForm = (props) => {
         />{" "}
         <p>Remember me</p>
       </div>
-
+      {props.error && <div className={loginClasses.formSummaryError}>{props.error}</div>}
       <button className={classes.btn}>Login</button>
     </form>
   );
