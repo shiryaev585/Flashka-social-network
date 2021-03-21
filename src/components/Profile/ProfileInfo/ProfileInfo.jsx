@@ -12,7 +12,7 @@ const ProfileInfo = (props) => {
     <div>
       <div className={classes.descriptionBlock}>
         <h3 className={classes.descriptionBlock__title}>
-          Hi! I'm {props.profile.fullName}
+          Hello, {props.profile.fullName}
         </h3>
         <div>
           <img

@@ -1,7 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { Input } from "../../common/FormsControls/FormsControls";
-import classes from "./ProfileInfo.module.scss"
 
 class ProfileStatus extends React.Component {
 
