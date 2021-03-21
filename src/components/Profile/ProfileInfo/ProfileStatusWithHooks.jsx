@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Field, reduxForm } from "redux-form";
 import { Input } from "../../common/FormsControls/FormsControls";
 
 const ProfileStatusWithHooks = (props) => {
+  
   let [editMode, setEditMode] = useState(false);
   let [status, setStatus] = useState(props.status);
+
+  useEffect(() => {
+    
+    setStatus(props.status)
+  }, [props.status])
 
   const activateMode = () => {
     setEditMode(true);
@@ -23,7 +29,7 @@ const ProfileStatusWithHooks = (props) => {
     <div>
       {!editMode && (
         <div>
-          <span onDoubleClick={activateMode}>{props.status || "--------"}</span>
+          <span onDoubleClick={activateMode}>{props.status || "set status"}</span>
         </div>
       )}
       {editMode && (
