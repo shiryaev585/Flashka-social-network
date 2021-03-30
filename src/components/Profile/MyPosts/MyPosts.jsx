@@ -6,10 +6,12 @@ import classes from "./MyPosts.module.scss";
 import Post from "./Post/Post";
 import Button from "../../common/Button/Button"
 
-const MyPosts = (props) => {
+const MyPosts = React.memo((props) => {
   let postsElements = props.posts.map((p) => (
     <Post message={p.message} key={p.id} likesCount={p.likesCount} />
   ));
+
+  let newPostElement = React.createRef();
 
   let onAddPost = (values) => {
     props.addPost(values.newPostText);
@@ -22,7 +24,7 @@ const MyPosts = (props) => {
       <div className={classes.posts}>{postsElements}</div>
     </div>
   );
-};
+});
 
 const maxLength500 = maxLengthCreator(500);
 
@@ -44,8 +46,6 @@ const AddNewPostForm = (props) => {
   );
 };
 
-const AddNewPostFormRedux = reduxForm({ form: "profileAddPostForm" })(
-  AddNewPostForm
-);
+const AddNewPostFormRedux = reduxForm({ form: "profileAddPostForm" })(AddNewPostForm);
 
 export default MyPosts;

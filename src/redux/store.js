@@ -1,64 +1,23 @@
-// import dialogsReducer from "./dialogsReducer";
-// import profileReducer from "./profileReducer";
-// import sidebarReducer from "./sidebarReducer";
+import { applyMiddleware, combineReducers, createStore } from "redux";
+import profileReducer from "./profileReducer";
+import dialogsReducer from "./dialogsReducer";
+import usersReduser from "./usersReducer";
+import authReducer from "./authReducer";
+import thunkMiddleware from "redux-thunk";
+import { reducer as formReducer } from 'redux-form'
+import appReducer from "./appReducer";
 
-// let store = {
-//   _state: {
-//     profilePage: {
-//       posts: [
-//         { id: 1, message: "Hi, how are you", likesCount: 0 },
-//         { id: 2, message: "It's my first post", likesCount: 0 },
-//       ],
-//       newPostText: "it-kamasutra.com",
-//     },
+let reducers = combineReducers({
+  profilePage: profileReducer,
+  dialogsPage: dialogsReducer,
+  usersPage: usersReduser,
+  auth: authReducer,
+  form: formReducer,
+  app: appReducer
+});
 
-//     dialogsPage: {
-//       dialogs: [
-//         { id: 1, name: "Dimych" },
-//         { id: 2, name: "Andrey" },
-//         { id: 3, name: "Sveta" },
-//         { id: 4, name: "Sasha" },
-//         { id: 5, name: "Viktor" },
-//         { id: 6, name: "Valera" },
-//       ],
-//       messages: [
-//         { id: 1, message: "Hi" },
-//         { id: 2, message: "How is your it-kamasutra" },
-//       ],
-//       newMessageText: "",
-//     },
+let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
-//     sidebar: {
-//       friends: [
-//         { id: 1, name: "Andrew" },
-//         { id: 2, name: "Sveta" },
-//         { id: 3, name: "Sasha" },
-//       ],
-//     },
-//   },
-//   _callSuscriber() {
-//     console.log("State was changed");
-//   },
+window.store = store;
 
-//   getState() {
-//     return this._state;
-//   },
-//   subscribe(observer) {
-//     this._callSuscriber = observer;
-//   },
-
-//   dispatch(action) {
-
-//     this._state.profilePage = profileReducer(this._state.profilePage, action);
-//     this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
-//     this._state.sidebar = sidebarReducer(this._state.sidebar, action);
-
-//     this._callSuscriber(this._state);
-//   },
-// };
-
-
-
-
-// export default store;
-// window.store = store;
+export default store;
