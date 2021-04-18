@@ -2,6 +2,7 @@
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .pageNumber {
@@ -9,7 +10,7 @@
     border: 1px solid #ccc 
 }
 
-.pageNumber.selectedPage {
+.selectedPage {
     font-weight: bold;
     border-color: #000;
 }

@@ -1,0 +1,13 @@
+@import '../../../assets/variables/variables.scss';
+
+.arrowBtn {
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+    background-color: transparent;
+    color: $blue;
+    font-size: 18px;
+    &:hover {
+        color: $blueHover;
+    }
+}

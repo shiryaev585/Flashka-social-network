@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import LeftArrow from '../Arrows/LeftArrow'
+import RightArrow from '../Arrows/RightArrow'
 import classes from './Pagination.module.scss'
-// import cn from 'classnames'
 
 const Pagination = ({
   totalItemsCount,
@@ -21,38 +22,44 @@ const Pagination = ({
   const leftPortionPageNumber = (portionNumber - 1) * portionSize + 1
   const rightPortionPageNumber = portionNumber * portionSize
 
+  const onPrev = () => {
+    setPortionNumber(portionNumber - 1)
+  }
+
+  const onNext = () => {
+    setPortionNumber(portionNumber + 1)
+  }
+
   return (
     <div className={classes.paginationWrapper}>
       {portionNumber > 1 && (
-        <button
-          onClick={() => {
-            setPortionNumber(portionNumber - 1)
-          }}
-        >
-          PREV
-        </button>
+        <div onClick={onPrev}>
+          <LeftArrow />
+        </div>
       )}
       {pages
         .filter(
           (page) =>
             page >= leftPortionPageNumber && page <= rightPortionPageNumber
         )
-        .map((page) => {
+        .map((page, index) => {
           return (
             <span
-              className={currentPage === page && classes.selectedPage}
+              key={index}
+              className={currentPage === page ? classes.selectedPage : null}
               onClick={(e) => {
                 onPageChanged(page)
               }}
             >
-              {page}{' '}
+              {page}
             </span>
           )
         })}
-        { portionCount > portionNumber && 
-        <button onClick={() => {
-          setPortionNumber(portionNumber + 1)
-        }} >NEXT</button> }
+      {portionCount > portionNumber && (
+        <div onClick={onNext}>
+          <RightArrow />
+        </div>
+      )}
     </div>
   )
 }
