@@ -15,7 +15,7 @@ const Header = (props) => {
           <div>
             <NavLink to="/profile" className={classes.header__loginBlock_link}>
               Hello, {props.login}
-            </NavLink><Button onClick={props.logout}><i class="fas fa-sign-out-alt"></i></Button>
+            </NavLink><Button onClick={props.logout}><i className="fas fa-sign-out-alt"></i></Button>
           </div>
         ) : (
           <NavLink to="/login" className={classes.header__loginBlock_link}>
