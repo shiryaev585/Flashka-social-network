@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Field, reduxForm } from "redux-form";
-import { Input } from "../../common/FormsControls/FormsControls";
+import { reduxForm } from "redux-form";
 
 const ProfileStatusWithHooks = (props) => {
   
@@ -40,12 +39,6 @@ const ProfileStatusWithHooks = (props) => {
             onChange={onStatusChange}
             value={status}
           />
-          {/* <Field
-            type={"text"}
-            name={"status"}
-            component={Input}
-            autoFocus={true}
-          /> */}
         </div>
       )}
     </div>

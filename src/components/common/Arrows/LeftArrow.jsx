@@ -4,7 +4,7 @@ import classes from './Arrows.module.scss'
 const LeftArrow = (props) => {
   return (
     <button className={classes.arrowBtn}>
-      <i class="fas fa-angle-double-left"></i>
+      <i className="fas fa-angle-double-left"></i>
     </button>
   )
 }

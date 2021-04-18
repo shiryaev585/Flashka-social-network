@@ -1,12 +1,16 @@
+.addPostForm {
+  width: 400px;
+  & button {
+    width: 100px;
+    margin-top: 10px;
+    float: right;
+  }
+}
+
 .postsWrapper {
   padding: 16px;
 }
 
 .posts {
   margin-top: 16px;
-}
-
-form button {
-  width: 100px;
-  margin-top: 10px;
 }
