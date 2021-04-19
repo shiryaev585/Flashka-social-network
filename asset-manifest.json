@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Flashka-social-network/static/css/main.312f644c.chunk.css",
-    "main.js": "/Flashka-social-network/static/js/main.b46a5753.chunk.js",
-    "main.js.map": "/Flashka-social-network/static/js/main.b46a5753.chunk.js.map",
+    "main.js": "/Flashka-social-network/static/js/main.a5c816c1.chunk.js",
+    "main.js.map": "/Flashka-social-network/static/js/main.a5c816c1.chunk.js.map",
     "runtime-main.js": "/Flashka-social-network/static/js/runtime-main.c73114fe.js",
     "runtime-main.js.map": "/Flashka-social-network/static/js/runtime-main.c73114fe.js.map",
     "static/js/2.1e74a102.chunk.js": "/Flashka-social-network/static/js/2.1e74a102.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.c73114fe.js",
     "static/js/2.1e74a102.chunk.js",
     "static/css/main.312f644c.chunk.css",
-    "static/js/main.b46a5753.chunk.js"
+    "static/js/main.a5c816c1.chunk.js"
   ]
 }
