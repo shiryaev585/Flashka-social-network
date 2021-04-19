@@ -14,7 +14,6 @@ const LoginForm = ({ handleSubmit, error }) => {
   return (
     <form onSubmit={handleSubmit} className={classes.loginForm}>
       <h2 className={classes.loginForm__title}>Login</h2>
-      <div>
         <Field
           validate={[required]}
           type={'email'}
@@ -23,8 +22,6 @@ const LoginForm = ({ handleSubmit, error }) => {
           component={Input}
           className={classes.input}
         />
-      </div>
-      <div>
         <Field
           validate={[required]}
           type={'password'}
@@ -33,13 +30,12 @@ const LoginForm = ({ handleSubmit, error }) => {
           component={Input}
           className={classes.input}
         />
-      </div>
       <div className={classes.checkboxWrapper}>
         <Field
           type={'checkbox'}
           name={'rememberMe'}
           component={Input}
-          className={classes.input}
+          className={classes.inputCheckbox}
         />{' '}
         <p>Remember me</p>
       </div>

@@ -8,7 +8,7 @@ const Pagination = ({
   pageSize,
   currentPage,
   onPageChanged,
-  portionSize = 20,
+  portionSize = 10,
 }) => {
   let pagesCount = Math.ceil(totalItemsCount / pageSize)
 
