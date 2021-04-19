@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Flashka-social-network/static/css/main.312f644c.chunk.css",
-    "main.js": "/Flashka-social-network/static/js/main.a5c816c1.chunk.js",
-    "main.js.map": "/Flashka-social-network/static/js/main.a5c816c1.chunk.js.map",
+    "main.css": "/Flashka-social-network/static/css/main.81838132.chunk.css",
+    "main.js": "/Flashka-social-network/static/js/main.7466e4c4.chunk.js",
+    "main.js.map": "/Flashka-social-network/static/js/main.7466e4c4.chunk.js.map",
     "runtime-main.js": "/Flashka-social-network/static/js/runtime-main.c73114fe.js",
     "runtime-main.js.map": "/Flashka-social-network/static/js/runtime-main.c73114fe.js.map",
-    "static/js/2.1e74a102.chunk.js": "/Flashka-social-network/static/js/2.1e74a102.chunk.js",
-    "static/js/2.1e74a102.chunk.js.map": "/Flashka-social-network/static/js/2.1e74a102.chunk.js.map",
+    "static/js/2.c67fe59a.chunk.js": "/Flashka-social-network/static/js/2.c67fe59a.chunk.js",
+    "static/js/2.c67fe59a.chunk.js.map": "/Flashka-social-network/static/js/2.c67fe59a.chunk.js.map",
     "static/js/3.6645be0f.chunk.js": "/Flashka-social-network/static/js/3.6645be0f.chunk.js",
     "static/js/3.6645be0f.chunk.js.map": "/Flashka-social-network/static/js/3.6645be0f.chunk.js.map",
     "index.html": "/Flashka-social-network/index.html",
-    "static/css/main.312f644c.chunk.css.map": "/Flashka-social-network/static/css/main.312f644c.chunk.css.map",
-    "static/js/2.1e74a102.chunk.js.LICENSE.txt": "/Flashka-social-network/static/js/2.1e74a102.chunk.js.LICENSE.txt",
+    "static/css/main.81838132.chunk.css.map": "/Flashka-social-network/static/css/main.81838132.chunk.css.map",
+    "static/js/2.c67fe59a.chunk.js.LICENSE.txt": "/Flashka-social-network/static/js/2.c67fe59a.chunk.js.LICENSE.txt",
     "static/media/flashka_logo.113be410.svg": "/Flashka-social-network/static/media/flashka_logo.113be410.svg",
     "static/media/spinning-circles.f2322b35.svg": "/Flashka-social-network/static/media/spinning-circles.f2322b35.svg",
     "static/media/user.4d800999.png": "/Flashka-social-network/static/media/user.4d800999.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c73114fe.js",
-    "static/js/2.1e74a102.chunk.js",
-    "static/css/main.312f644c.chunk.css",
-    "static/js/main.a5c816c1.chunk.js"
+    "static/js/2.c67fe59a.chunk.js",
+    "static/css/main.81838132.chunk.css",
+    "static/js/main.7466e4c4.chunk.js"
   ]
 }
