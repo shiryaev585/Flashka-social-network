@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, withRouter } from 'react-router-dom'
+import { HashRouter, Route, withRouter } from 'react-router-dom'
 import { connect, Provider } from 'react-redux'
 import { compose } from 'redux'
 import Navbar from './components/Navbar/Navbar'
@@ -60,11 +60,11 @@ const AppContainer = compose(
 const MainApp = (props) => {
   return (
     <React.StrictMode>
-      <BrowserRouter>
+      <HashRouter>
         <Provider store={store}>
           <AppContainer />
         </Provider>
-      </BrowserRouter>
+      </HashRouter>
     </React.StrictMode>
   )
 }
