@@ -60,9 +60,18 @@
     border: 1px solid #eee;
     background-color: #fff;
     padding: 16px;
-    height: 100px;
     border-radius: 5px;
     box-shadow: 5px 5px 5px -5px #223C50;
+    &__link {
+        color: $green;
+        font-weight: bold;
+        &:hover {
+            color: $greenHover;
+        }
+        &:active {
+            color: $green;
+        }
+    }
 }
 
 
