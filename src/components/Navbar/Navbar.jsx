@@ -6,12 +6,12 @@ const Navbar = (props) => {
     return (
         <nav className={classes.nav}>
             <ul className={classes.nav__ul}>
-                <li><i className="far fa-user-circle"></i><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/profile">Profile</NavLink></li>
-                <li><i className="fas fa-users"></i><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/users">Users</NavLink></li>
-                <li><i className="far fa-comment-alt"></i><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/dialogs">Massages</NavLink></li>
-                <li><i className="fas fa-globe"></i><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/news">News</NavLink></li>
-                <li><i className="fas fa-music"></i><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/music">Music</NavLink></li>
-                <li><i className="fas fa-cog"></i><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/settings">Settings</NavLink></li>
+                <li><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/profile"><i className="far fa-user-circle"></i>Profile</NavLink></li>
+                <li><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/users"><i className="fas fa-users"></i>Users</NavLink></li>
+                <li><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/dialogs"><i className="far fa-comment-alt"></i>Massages</NavLink></li>
+                <li><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/news"><i className="fas fa-globe"></i>News</NavLink></li>
+                <li><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/music"><i className="fas fa-music"></i>Music</NavLink></li>
+                <li><NavLink className={classes.nav__item} activeClassName={classes.nav__active} to="/settings"><i className="fas fa-cog"></i>Settings</NavLink></li>
             </ul>
         </nav>
     )
