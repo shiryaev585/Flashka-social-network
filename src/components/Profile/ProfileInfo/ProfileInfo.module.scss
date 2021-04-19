@@ -39,3 +39,9 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .descriptionBlock {
+    flex-direction: column;
+  }
+}

@@ -4,7 +4,6 @@
     "header header"
     "nav content";
   grid-template-rows: 60px 1fr;
-  // grid-template-columns: 4fr 8fr;
   grid-gap: 60px 20px;
   &__content {
     grid-area: content;
@@ -33,3 +32,23 @@ textarea {
   display: block;
 }
 
+@media (max-width: 992px) {
+  .app-wrapper__content {
+    max-width: 500px;
+    margin: 0 auto 100px;
+    grid-gap: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-wrapper__content {
+    border-radius: 0;
+  }
+}
