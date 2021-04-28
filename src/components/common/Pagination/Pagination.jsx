@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import LeftArrow from '../Arrows/LeftArrow'
 import RightArrow from '../Arrows/RightArrow'
 import classes from './Pagination.module.scss'
+// import cn from 'classnames'
 
 const Pagination = ({
   totalItemsCount,
