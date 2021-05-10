@@ -6,10 +6,16 @@ import userPhoto from '../../../assets/images/user.png';
 import ProfileDataForm from './ProfileDataForm';
 import Contact from './Contact';
 
-const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, saveProfile }) => {
-
+const ProfileInfo = ({
+  profile,
+  status,
+  updateStatus,
+  isOwner,
+  savePhoto,
+  saveProfile,
+}) => {
   const [editMode, setEditMode] = useState(false);
-  
+
   if (!profile) {
     return <Preloader />;
   }
@@ -20,9 +26,11 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, savePr
     }
   };
 
-  const onSubmit= (formData) => {
-    saveProfile(formData)
-  }
+  const onSubmit = (formData) => {
+    saveProfile(formData).then(() => {
+      setEditMode(false);
+    });
+  };
 
   return (
     <div>
@@ -36,9 +44,21 @@ const ProfileInfo = ({ profile, status, updateStatus, isOwner, savePhoto, savePr
           />
           {isOwner && <input type={'file'} onChange={onMainPhotoSelected} />}
 
-          {editMode 
-            ? <ProfileDataForm profile={profile} onSubmit={onSubmit} /> 
-            : <ProfileData goToEditMode={() => {setEditMode(true)}} profile={profile} isOwner={isOwner} />}
+          {editMode ? (
+            <ProfileDataForm
+              initialValues={profile}
+              profile={profile}
+              onSubmit={onSubmit}
+            />
+          ) : (
+            <ProfileData
+              goToEditMode={() => {
+                setEditMode(true);
+              }}
+              profile={profile}
+              isOwner={isOwner}
+            />
+          )}
 
           {/* <ProfileData profile={profile} /> */}
           <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
