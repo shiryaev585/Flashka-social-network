@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { reduxForm } from "redux-form";
 
 const ProfileStatusWithHooks = (props) => {
   
@@ -7,7 +6,6 @@ const ProfileStatusWithHooks = (props) => {
   let [status, setStatus] = useState(props.status);
 
   useEffect(() => {
-    
     setStatus(props.status)
   }, [props.status])
 
@@ -43,12 +41,6 @@ const ProfileStatusWithHooks = (props) => {
       )}
     </div>
   );
-};
-
-const StatusReduxForm = reduxForm({ form: "status" })(ProfileStatusWithHooks);
-
-const Status = (props) => {
-  return <StatusReduxForm {...props} />;
 };
 
 export default ProfileStatusWithHooks;

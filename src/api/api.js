@@ -1,5 +1,5 @@
 import * as axios from "axios";
-import { saveProfile } from "../store/profileReducer";
+// import { saveProfile } from "../store/profileReducer";
 
 const instance = axios.create({
   withCredentials: true,

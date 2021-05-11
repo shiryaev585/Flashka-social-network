@@ -5,6 +5,7 @@ import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 import userPhoto from '../../../assets/images/user.png';
 import ProfileDataForm from './ProfileDataForm';
 import Contact from './Contact';
+import Button from '../../common/Button/Button';
 
 const ProfileInfo = ({
   profile,
@@ -37,30 +38,30 @@ const ProfileInfo = ({
       <div className={classes.descriptionBlock}>
         <h3 className={classes.descriptionBlock__title}>{profile.fullName}</h3>
         <div>
-          <img
-            src={profile.photos.large || userPhoto}
-            className={classes.descriptionBlock__imgUser}
-            alt='user-img'
-          />
-          {isOwner && <input type={'file'} onChange={onMainPhotoSelected} />}
+          <div>
+            <img
+              src={profile.photos.large || userPhoto}
+              className={classes.descriptionBlock__imgUser}
+              alt='user-img'
+            />
+            {isOwner && <input className={classes.descriptionBlock__changeAvaInput} type={'file'} onChange={onMainPhotoSelected} />}
+          </div>
 
-          {editMode ? (
-            <ProfileDataForm
+          {editMode 
+            ? <ProfileDataForm
               initialValues={profile}
               profile={profile}
               onSubmit={onSubmit}
-            />
-          ) : (
-            <ProfileData
+            /> 
+            : <ProfileData
               goToEditMode={() => {
                 setEditMode(true);
               }}
               profile={profile}
               isOwner={isOwner}
             />
-          )}
+          }
 
-          {/* <ProfileData profile={profile} /> */}
           <ProfileStatusWithHooks status={status} updateStatus={updateStatus} />
         </div>
       </div>
@@ -72,13 +73,12 @@ const ProfileData = ({ profile, isOwner, goToEditMode }) => {
   return (
     <>
       <div className={classes.descriptionBlock__about}>
-        {isOwner && <button onClick={goToEditMode}>edit</button>}
+        {isOwner && <Button onClick={goToEditMode}>Edit</Button>}
         <p>About me: {profile.aboutMe}</p>
-        {profile.lookingForAJob ? (
-          <p>I'm looking for a job</p>
-        ) : (
-          <span>&#128526;</span>
-        )}
+        {profile.lookingForAJob 
+          ? <p>I'm looking for a job</p>
+          : <span>&#128526;</span>
+        }
         <p>My professional skills: {profile.lookingForAJobDescription}</p>
       </div>
       <div className={classes.descriptionBlock__contacts}>

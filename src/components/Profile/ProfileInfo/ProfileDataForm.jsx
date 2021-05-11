@@ -7,6 +7,7 @@ import {
 } from '../../common/FormsControls/FormsControls';
 import classes from './ProfileInfo.module.scss';
 import classesError from '../../common/FormsControls/FormsControls.module.scss';
+import Button from '../../common/Button/Button';
 
 const ProfileDataForm = ({ profile, handleSubmit, error }) => {
   return (
@@ -42,7 +43,8 @@ const ProfileDataForm = ({ profile, handleSubmit, error }) => {
           );
         })}
       </div>
-      <button>Save changes</button>
+      <Button>Save changes</Button>
+      {/* <button>Save changes</button> */}
     </form>
   );
 };
